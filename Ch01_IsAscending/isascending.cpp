@@ -88,7 +88,7 @@ void test_make_vector() {
 
 int main(int argc, char *argv[]) {
 
-    //test_make_vector();
+    ////test_make_vector();
 
     // std::vector<int> vec1 {1, 2, 3, 4},
     //                  vec2 {2, 1, 3, 4},
@@ -102,29 +102,29 @@ int main(int argc, char *argv[]) {
     // std::cout << is_ascending2(vec2) << '\n';
     // std::cout << is_ascending2(vec3) << '\n';
 
-    const int VECTOR_SIZE = 5'000'000;
+    //const int VECTOR_SIZE = 5'000'000;
 
-    std::cout << "Timing " << VECTOR_SIZE << '\n';
-    std::vector<int> v(VECTOR_SIZE);
-    std::iota(v.begin(), v.end(), 0);
-    std::cout << std::fixed << std::setprecision(7)
-              << std::setw(10) << VECTOR_SIZE
-              << std::setw(15) << time_f(v, is_ascending1)
-              << std::setw(15) << time_f(v, is_ascending2) << '\n';
-    exit(0);
+    //std::cout << "Timing " << VECTOR_SIZE << '\n';
+    //std::vector<int> v(VECTOR_SIZE);
+    //std::iota(v.begin(), v.end(), 0);
+    //std::cout << std::fixed << std::setprecision(7)
+    //          << std::setw(10) << VECTOR_SIZE
+    //          << std::setw(15) << time_f(v, is_ascending1)
+    //          << std::setw(15) << time_f(v, is_ascending2) << '\n';
+    //exit(0);
 
-    if (argc < 2) {
-        std::cout << "Provide vector size on command line to test is_ascending\n";
-    }
-    else {
-        const int VECTOR_SIZE = atoi(argv[1]);
+    //if (argc < 2) {
+    //    std::cout << "Provide vector size on command line to test is_ascending\n";
+    //}
+    //else {
+    //    const int VECTOR_SIZE = atoi(argv[1]);
 
-        std::vector<int> bigvec(VECTOR_SIZE);
-        std::iota(bigvec.begin(), bigvec.end(), 0);
+    //    std::vector<int> bigvec(VECTOR_SIZE);
+    //    std::iota(bigvec.begin(), bigvec.end(), 0);
 
-        time_it(bigvec, is_ascending1);
-        time_it(bigvec, is_ascending2);
-    }
+    //    time_it(bigvec, is_ascending1);
+    //    time_it(bigvec, is_ascending2);
+    //}
 
     for (int i = 0; i < 100000; i += 5000) { 
         std::vector<int> v(i);
